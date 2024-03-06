@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextWorkoutDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Workout Duration (seconds)"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/editTextRestDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Rest Duration (seconds)"
+        android:layout_below="@id/editTextWorkoutDuration"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_below="@id/editTextRestDuration"/>
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:layout_below="@id/startButton"/>
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:layout_centerInParent="true"/>
+
+    <ProgressBar
+        android:id="@+id/timerProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerTextView"/>
+</RelativeLayout>
